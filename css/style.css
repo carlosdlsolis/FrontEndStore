@@ -130,6 +130,7 @@ html {
       background-color: var(--primarioOscuro);
       padding: 1rem;
       min-width: 100%;
+      word-wrap: break-word;
       
 }
 
@@ -206,7 +207,7 @@ html {
  
 
   .nosotros__contenido{
-      grid-column: ;
+      
 
   }
 
