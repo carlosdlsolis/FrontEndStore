@@ -39,7 +39,7 @@ html {
   }
 
   img{
-      max-width: 100%;
+      width: 100%;
   }
 
   .contenedor{
@@ -117,7 +117,7 @@ html {
       gap: 2rem; /*Separacion entre imagenes de cadab lado*/
   }
 
-  @media (min-width: 690px) {
+  @media (min-width: 768px) {
     .grid{
         display: grid;
         grid-template-columns: repeat( 3, 1fr);/* Ayuda a ordenarlos por columnas*/
@@ -133,11 +133,6 @@ html {
       word-wrap: break-word;
       
 }
-
-  .producto__imagen{
-      width: 100%;
-
-  }
 
   .producto__informacion{
 
@@ -183,7 +178,7 @@ html {
     grid-row: 8 / 9;
   }
 
-  @media (min-width: 690px){
+  @media (min-width: 768px){
     .grafico__node{
         grid-row: 5 / 6;
         grid-column: 2 / 4;  
@@ -192,28 +187,112 @@ html {
   }
  
   /** Pagina Nosotros**/
-
   .nosotros{
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
 
   }
-@media (min-width: 690px){
+@media (min-width: 768px){
     .nosotros {        
         grid-template-columns: repeat(2 , 1fr);
         gap: 2rem;
     }
 }
+
+.nosotros__contenido{
+    padding: 0 1rem 0 1rem;
+}
  
+ .nosotros__imagen{
+ grid-row: 1 / 2;   
+  
+  
+    }
 
-  .nosotros__contenido{
-      
+@media (min-width: 768px) {
+    .nosotros__imagen{
+        grid-column: 2 / 3;
+    }
+}
 
-  }
+/*Bloques*/
 
-  .nosotros__imagen{
-      grid-row: 1 / 2;
-      padding: 0;
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .bloques{
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        gap: 2rem;
+    }
+}
+
+.bloque{
+    text-align: center;
+}
+
+.bloque__titulo{
+    margin: 0;
+}
+
+/*Producto*/
+
+@media (min-width: 768px) {
+    .camisas{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        
+    }
+
+}
+.formulario{
+    display: flex;
+     flex-direction: column;
+     padding: 1rem;
+     gap: 1rem;
+}
+
+@media(min-width: 768px) {
+    .formulario {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 0 2rem;
+        
+    }
+}
+
+.formulario__campo{
+    border: 1rem solid var(--primarioOscuro);
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+
+}
+
+.formulario__submit{
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
     
 
-  }
+}
+.formulario__submit:hover{   
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
+
+
+  
+  
